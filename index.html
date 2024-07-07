@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvitaArte</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <header class="main-header">InvitaArte</header>
+    </nav>
+    <main>
+        
+        <section class="image-gallery">
+            
+            <h1>Corona en origami <br>
+                <img src="./imagenes/Corona.jpg"  alt="Hermosa corona de origami" class="mi-imagen" >
+                <div class="iconos">
+                    
+                    <a href="#" class="icono"><img src="./ico/Whastapp.ico" alt="WhatsApp"></a>
+                    <a href="#" class="icono"><img src="./ico/Instagram.ico" alt="Instagram"></a>
+                    
+                </div>
+            
+            </h1>
+            <h1>Flor en origami <br><img src="./imagenes/Flor.jpg" alt="Flor de origami" class="mi-imagen">
+                <div class="iconos">
+                    <a href="#" class="icono"><img src="./ico/Whastapp.ico" alt="WhatsApp"></a>
+                    <a href="#" class="icono"><img src="./ico/Instagram.ico" alt="Instagram"></a>
+                </div>
+            
+            </h1>
+            <h1>Pato en origami <br><img src="./imagenes/pato.jpg" alt="Pato de origami" class="mi-imagen">
+                <div class="iconos">
+                    <a href="#" class="icono"><img src="./ico/Whastapp.ico" alt="WhatsApp"></a>
+                    <a href="#" class="icono"><img src="./ico/Instagram.ico" alt="Instagram"></a>
+                </div>
+            </h1>
+            <h1>Pato en origami <br><img src="./imagenes/Vestido.jpg" alt="Vestido de origami" class="mi-imagen">
+                <div class="iconos">
+                    <a href="#" class="icono"><img src="./ico/Whastapp.ico" alt="WhatsApp"></a>
+                    <a href="#" class="icono"><img src="./ico/Instagram.ico" alt="Instagram"></a>
+                </div>
+            </h1>
+        </section>
+    </main>
+    <script>
+        document.querySelectorAll('.mi-imagen').forEach(img => {
+            img.addEventListener('mouseover', () => {
+                img.style.transform = 'translate(10px, 10px)';
+            });
+            img.addEventListener('mouseout', () => {
+                img.style.transform = 'translate(0, 0)';
+            });
+        });
+    </script>
+</body>
+</html>
