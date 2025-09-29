@@ -14,9 +14,15 @@
     <main>
         
         <section class="image-gallery">
+
+        
+
+
+
+
             
             <h1>Corona en origami <br>
-                <img src="./imagenes/Corona.jpg"  alt="Hermosa corona de origami" class="mi-imagen" >
+                <img src="./imagenes/Corona.jpg" alt="Hermosa corona de origami" class="mi-imagen" data-descripcion="Una hermosa corona hecha completamente en papel. Ideal para decorar celebraciones.">
                 <div class="iconos">
                     
                     <a href="#" class="icono"><img src="./ico/Whastapp.ico" alt="WhatsApp"></a>
@@ -25,20 +31,20 @@
                 </div>
             
             </h1>
-            <h1>Flor en origami <br><img src="./imagenes/Flor.jpg" alt="Flor de origami" class="mi-imagen">
+            <h1>Flor en origami <br><img src="./imagenes/Flor.jpg" alt="Flor de origami" class="mi-imagen" data-descripcion="Una flor delicada hecha en papel. Ideal para regalar o decorar.">
                 <div class="iconos">
                     <a href="#" class="icono"><img src="./ico/Whastapp.ico" alt="WhatsApp"></a>
                     <a href="#" class="icono"><img src="./ico/Instagram.ico" alt="Instagram"></a>
                 </div>
             
             </h1>
-            <h1>Pato en origami <br><img src="./imagenes/pato.jpg" alt="Pato de origami" class="mi-imagen">
+            <h1>Pato en origami <br><img src="./imagenes/pato.jpg" alt="Pato de origami" class="mi-imagen" data-descripcion="Pato en origami divertido, fácil de hacer y perfecto para niños.">
                 <div class="iconos">
                     <a href="#" class="icono"><img src="./ico/Whastapp.ico" alt="WhatsApp"></a>
                     <a href="#" class="icono"><img src="./ico/Instagram.ico" alt="Instagram"></a>
                 </div>
             </h1>
-            <h1>Pato en origami <br><img src="./imagenes/Vestido.jpg" alt="Vestido de origami" class="mi-imagen">
+            <h1>Pato en origami <br><img src="./imagenes/Vestido.jpg" alt="Vestido de origami" class="mi-imagen" data-descripcion="Vestido en origami, ideal para invitaciones o tarjetas personalizadas.">
                 <div class="iconos">
                     <a href="#" class="icono"><img src="./ico/Whastapp.ico" alt="WhatsApp"></a>
                     <a href="#" class="icono"><img src="./ico/Instagram.ico" alt="Instagram"></a>
@@ -47,14 +53,48 @@
         </section>
     </main>
     <script>
-        document.querySelectorAll('.mi-imagen').forEach(img => {
-            img.addEventListener('mouseover', () => {
-                img.style.transform = 'translate(10px, 10px)';
-            });
-            img.addEventListener('mouseout', () => {
-                img.style.transform = 'translate(0, 0)';
-            });
-        });
-    </script>
+  const modal = document.getElementById("modal");
+  const descripcion = document.getElementById("descripcion");
+  const cerrar = document.querySelector(".cerrar");
+
+  // Mostrar descripción al hacer clic en la imagen
+  document.querySelectorAll('.mi-imagen').forEach(img => {
+    img.addEventListener('click', () => {
+      const texto = img.getAttribute('data-descripcion');
+      descripcion.textContent = texto;
+      modal.style.display = "block";
+    });
+
+    // Efecto hover (ya lo tenías)
+    img.addEventListener('mouseover', () => {
+      img.style.transform = 'translate(10px, 10px)';
+    });
+    img.addEventListener('mouseout', () => {
+      img.style.transform = 'translate(0, 0)';
+    });
+  });
+
+  // Cerrar el modal con la "x"
+  cerrar.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  // Cerrar si se hace clic fuera del contenido
+  window.onclick = function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+    <!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="cerrar">&times;</span>
+    <p id="descripcion"></p>
+  </div>
+</div>
+
 </body>
 </html>
+
