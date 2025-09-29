@@ -51,7 +51,18 @@
             </h1>
         </section>
     </main>
-    <script>
+   
+
+    <!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="cerrar">&times;</span>
+    <img id="modal-img" src="" alt="Imagen ampliada" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+    <p id="descripcion"></p>
+  </div>
+</div>
+
+ <script>
   const modal = document.getElementById("modal");
   const descripcion = document.getElementById("descripcion");
   const cerrar = document.querySelector(".cerrar");
@@ -85,19 +96,9 @@
     }
   }
 </script>
-
-    <!-- Modal -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="cerrar">&times;</span>
-    <img id="modal-img" src="" alt="Imagen ampliada" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
-    <p id="descripcion"></p>
-  </div>
-</div>
-
-
 </body>
 </html>
+
 
 
 
